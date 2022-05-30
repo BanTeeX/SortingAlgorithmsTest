@@ -10,10 +10,18 @@
 			for (int i = halfIndex, j = 0; i >= 0; i--, j++)
 			{
 				tab[i] = j;
-				tab[halfIndex + j] = j;
+				if (halfIndex + j < tab.Length)
+				{
+					tab[halfIndex + j] = j;
+				}
 			}
 
 			return tab;
+		}
+
+		public override string ToString()
+		{
+			return "V-shaped";
 		}
 	}
 }

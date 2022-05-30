@@ -1,4 +1,4 @@
-﻿namespace SortingAlgorithmsTest.Sorts
+﻿namespace SortingAlgorithmsTest.Sorts.Algorithms
 {
 	public interface ISortingAlgorithm
 	{

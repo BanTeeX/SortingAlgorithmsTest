@@ -13,5 +13,10 @@
 
 			return tab;
 		}
+
+		public override string ToString()
+		{
+			return "Sorted ascending";
+		}
 	}
 }

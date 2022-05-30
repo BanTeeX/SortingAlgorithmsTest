@@ -1,3 +1,5 @@
+using SortingAlgorithmsTest.Sorts.Algorithms;
+
 namespace SortingAlgorithmsTestTests
 {
 	public class SortsTest

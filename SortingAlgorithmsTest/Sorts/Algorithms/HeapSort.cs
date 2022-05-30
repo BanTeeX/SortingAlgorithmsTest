@@ -36,5 +36,10 @@
 				}
 			}
 		}
+
+		public override string ToString()
+		{
+			return "Heap";
+		}
 	}
 }

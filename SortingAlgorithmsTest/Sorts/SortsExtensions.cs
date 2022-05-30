@@ -1,4 +1,6 @@
-﻿namespace SortingAlgorithmsTest.Sorts
+﻿using SortingAlgorithmsTest.Sorts.Algorithms;
+
+namespace SortingAlgorithmsTest.Sorts
 {
 	public static class SortsExtensions
 	{

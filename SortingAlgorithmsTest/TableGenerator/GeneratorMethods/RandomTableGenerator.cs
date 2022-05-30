@@ -9,10 +9,15 @@
 
 			for (int i = 0; i < tab.Length; i++)
 			{
-				tab[i] = random.Next(1000);
+				tab[i] = random.Next(tab.Length);
 			}
 
 			return tab;
+		}
+
+		public override string ToString()
+		{
+			return "Random";
 		}
 	}
 }

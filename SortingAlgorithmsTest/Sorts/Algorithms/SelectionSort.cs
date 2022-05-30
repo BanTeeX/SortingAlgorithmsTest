@@ -17,5 +17,10 @@
 				tab.Swap(i, minIndex);
 			}
 		}
+
+		public override string ToString()
+		{
+			return "Selection";
+		}
 	}
 }

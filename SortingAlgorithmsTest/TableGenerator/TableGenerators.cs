@@ -2,7 +2,7 @@
 
 namespace SortingAlgorithmsTest.TableGenerator
 {
-	public static class TableGenerators //TODO - dodać IEnumerable
+	public static class TableGenerators
 	{
 		public static ITableGenerator SortedAscending => new SortedAscendingTableGenerator();
 		public static ITableGenerator SortedDescending => new SortedDescendingTableGenerator();

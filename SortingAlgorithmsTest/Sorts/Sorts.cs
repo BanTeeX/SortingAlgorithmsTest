@@ -2,7 +2,7 @@
 
 namespace SortingAlgorithmsTest.Sorts
 {
-	public static class Sorts //TODO - dodać IEnumerable
+	public static class Sorts
 	{
 		public static ISortingAlgorithm SelectionSort => new SelectionSort();
 		public static ISortingAlgorithm InsertionSort => new InsertionSort();

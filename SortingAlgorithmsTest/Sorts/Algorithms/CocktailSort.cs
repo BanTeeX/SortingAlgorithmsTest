@@ -41,5 +41,10 @@
 				leftPoint++;
 			}
 		}
+
+		public override string ToString()
+		{
+			return "Cocktail";
+		}
 	}
 }
