@@ -6,10 +6,10 @@ namespace SortingAlgorithmsTestTests
 	{
 		public IEnumerator<object[]> GetEnumerator()
 		{
-			yield return new object[] { Sorts.SelectionSort };
-			yield return new object[] { Sorts.InsertionSort };
-			yield return new object[] { Sorts.CocktailSort };
-			yield return new object[] { Sorts.HeapSort };
+			yield return new object[] { SortsInstances.SelectionSort };
+			yield return new object[] { SortsInstances.InsertionSort };
+			yield return new object[] { SortsInstances.CocktailSort };
+			yield return new object[] { SortsInstances.HeapSort };
 		}
 
 		IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();

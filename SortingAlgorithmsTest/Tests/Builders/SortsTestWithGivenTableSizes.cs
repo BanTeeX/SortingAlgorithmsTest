@@ -4,7 +4,7 @@ using SortingAlgorithmsTest.Tests.DataStructures;
 
 namespace SortingAlgorithmsTest.Tests.Builders
 {
-	internal class SortsTestWithGivenTableSizes : ISortsTestBuilder
+	internal class SortsTestWithGivenTableSizes : ISortsTestBuilder<List<SortTestCase>>
 	{
 		public IEnumerable<ISortingAlgorithm> Algorithms { get; set; }
 		public IEnumerable<ITableGenerator> TableGenerators { get; set; }

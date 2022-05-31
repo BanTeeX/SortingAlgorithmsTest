@@ -4,7 +4,7 @@ using System.Diagnostics;
 
 namespace SortingAlgorithmsTest.Tests.Testers
 {
-	internal class SortsTimeTester : ISortsTester
+	internal class SortsTimeTester : ISortsTester<SortTestCase, SortTestResult>
 	{
 		public SortTestResult RunTest(SortTestCase testCase)
 		{

@@ -1,8 +1,8 @@
 ﻿using SortingAlgorithmsTest.TableGenerator.GeneratorMethods;
 
-namespace SortingAlgorithmsTest.TableGenerator
+namespace SortingAlgorithmsTest.TableGenerators
 {
-	public static class TableGenerators
+	public static class TableGeneratorsInstances
 	{
 		public static ITableGenerator SortedAscending => new SortedAscendingTableGenerator();
 		public static ITableGenerator SortedDescending => new SortedDescendingTableGenerator();

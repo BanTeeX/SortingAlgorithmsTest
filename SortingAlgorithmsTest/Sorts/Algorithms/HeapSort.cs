@@ -29,10 +29,10 @@
 					maxIndex = rightIndex;
 				}
 
-				if (i != maxIndex) //TODO - do poprawy
+				if (i != maxIndex)
 				{
 					tab.Swap(i, maxIndex);
-					i = maxIndex + 1;
+					i = maxIndex + 1; //TODO - do poprawy
 				}
 			}
 		}

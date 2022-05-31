@@ -1,9 +1,7 @@
-﻿using SortingAlgorithmsTest.Tests.DataStructures;
-
-namespace SortingAlgorithmsTest.Tests.Builders
+﻿namespace SortingAlgorithmsTest.Tests.Builders
 {
-	internal interface ISortsTestBuilder
+	internal interface ISortsTestBuilder<TTestCase>
 	{
-		List<SortTestCase> Build();
+		TTestCase Build();
 	}
 }

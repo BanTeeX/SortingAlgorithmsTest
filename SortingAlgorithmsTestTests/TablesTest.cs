@@ -1,5 +1,5 @@
-﻿using SortingAlgorithmsTest.TableGenerator;
-using SortingAlgorithmsTest.TableGenerator.GeneratorMethods;
+﻿using SortingAlgorithmsTest.TableGenerator.GeneratorMethods;
+using SortingAlgorithmsTest.TableGenerators;
 
 namespace SortingAlgorithmsTestTests
 {
@@ -14,7 +14,7 @@ namespace SortingAlgorithmsTestTests
 		[Fact]
 		public void ConstantTableTest()
 		{
-			var tab = TableGenerators.Constant.Generate(10);
+			var tab = TableGeneratorsInstances.Constant.Generate(10);
 
 			bool isGood = true;
 			for (int i = 0; i < tab.Length - 1; i++)
@@ -31,7 +31,7 @@ namespace SortingAlgorithmsTestTests
 		[Fact]
 		public void RandomTableTest()
 		{
-			var tab = TableGenerators.Random.Generate(10);
+			var tab = TableGeneratorsInstances.Random.Generate(10);
 
 			Assert.True(10 == tab.Length);
 		}

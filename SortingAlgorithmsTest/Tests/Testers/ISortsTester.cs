@@ -1,19 +1,26 @@
-﻿using SortingAlgorithmsTest.Tests.DataStructures;
-
-namespace SortingAlgorithmsTest.Tests.Testers
+﻿namespace SortingAlgorithmsTest.Tests.Testers
 {
-	internal interface ISortsTester
+	internal interface ISortsTester<TTestCase, TTestResult>
 	{
-		public async Task<List<SortTestResult>> RunTestsAsync(IEnumerable<SortTestCase> tests)
+		async Task<List<TTestResult>> RunTestsAsync(IEnumerable<TTestCase> tests, IProgress<ProgressReport> progress)
 		{
-			var results = new List<SortTestResult>();
+			var results = new List<TTestResult>();
+			ProgressReport report;
+			report.todo = tests.Count();
 
-			var tasks = tests.Select(test => Task.Run(() => results.Add(RunTest(test)))).ToArray();
-			await Task.WhenAll(tasks);
+			await Task.Run(() =>
+			{
+				Parallel.ForEach(tests, test =>
+				{
+					results.Add(RunTest(test));
+					report.done = results.Count;
+					progress.Report(report);
+				});
+			});
 
 			return results;
 		}
 
-		public SortTestResult RunTest(SortTestCase testCase);
+		TTestResult RunTest(TTestCase testCase);
 	}
 }
