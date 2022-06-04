@@ -4,35 +4,35 @@
 	{
 		public void Sort(int[] tab)
 		{
-			for (int heapSize = tab.Length; heapSize > 1; heapSize--)
+			Heapify(tab);
+			for (int i = tab.Length - 1; i > 0; i--)
 			{
-				Heapify(tab, heapSize);
-				tab.Swap(0, heapSize - 1);
+				tab.Swap(0, i);
+				for (int j = 0, index = 2 * j + 1; index < i; j = index)
+				{
+					if (tab[index] < tab[index + 1])
+					{
+						index++;
+					}
+
+					if (tab[j] < tab[index])
+					{
+						tab.Swap(j, index);
+					}
+				}
 			}
 		}
 
-		private void Heapify(int[] tab, int heapSize)
+		private void Heapify(int[] tab)
 		{
-			for (int i = heapSize - 1; i >= 0; i--)
+			for (int i = 1; i < tab.Length; i++)
 			{
-				int leftIndex = 2 * i + 1;
-				int rightIndex = 2 * i + 2;
-				int maxIndex = i;
-
-				if (leftIndex < heapSize && tab[leftIndex] > tab[maxIndex])
+				if (tab[i] > tab[(i - 1) / 2])
 				{
-					maxIndex = leftIndex;
-				}
-
-				if (rightIndex < heapSize && tab[rightIndex] > tab[maxIndex])
-				{
-					maxIndex = rightIndex;
-				}
-
-				if (i != maxIndex)
-				{
-					tab.Swap(i, maxIndex);
-					i = maxIndex + 1; //TODO - do poprawy
+					for (int j = i; tab[j] > tab[(j - 1) / 2]; j = (j - 1) / 2)
+					{
+						tab.Swap(j, (j - 1) / 2);
+					}
 				}
 			}
 		}
