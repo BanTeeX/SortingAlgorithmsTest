@@ -1,4 +1,4 @@
-﻿using SortingAlgorithmsTest.TableGenerator.GeneratorMethods;
+﻿using SortingAlgorithmsTest.TableGenerators.GeneratorMethods;
 
 namespace SortingAlgorithmsTest.TableGenerators
 {
@@ -9,5 +9,6 @@ namespace SortingAlgorithmsTest.TableGenerators
 		public static ITableGenerator Constant => new ConstantTableGenerator();
 		public static ITableGenerator VShaped => new VShapedTableGenerator();
 		public static ITableGenerator Random => new RandomTableGenerator();
+		public static ITableGenerator AShaped => new AShapedTableGenerator();
 	}
 }

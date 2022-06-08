@@ -4,10 +4,10 @@
 	{
 		public void Sort(int[] tab)
 		{
-			for (int i = 0; i < tab.Length; i++)
+			for (var i = 0; i < tab.Length; i++)
 			{
 				var minIndex = i;
-				for (int j = i + 1; j < tab.Length; j++)
+				for (var j = i + 1; j < tab.Length; j++)
 				{
 					if (tab[j] < tab[minIndex])
 					{

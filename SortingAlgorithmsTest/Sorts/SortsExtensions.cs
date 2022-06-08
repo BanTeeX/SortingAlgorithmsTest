@@ -1,12 +1,10 @@
-﻿using SortingAlgorithmsTest.Sorts.Algorithms;
-
-namespace SortingAlgorithmsTest.Sorts
+﻿namespace SortingAlgorithmsTest.Sorts
 {
 	public static class SortsExtensions
 	{
-		public static void SortTab(this int[] tab, ISortingAlgorithm algorithm)
+		public static void SortTab(this int[] tab, Action<int[]> algorithm)
 		{
-			algorithm.Sort(tab);
+			algorithm(tab);
 		}
 
 		public static void Swap(this int[] tab, int index1, int index2)

@@ -11,6 +11,8 @@ namespace SortingAlgorithmsTestTests
 			yield return new object[] { new int[] { 9, 8, 7, 6, 5, 4, 3, 2, 1, 0 }, TableGeneratorsInstances.SortedDescending };
 			yield return new object[] { new int[] { 5, 4, 3, 2, 1, 0, 1, 2, 3, 4 }, TableGeneratorsInstances.VShaped };
 			yield return new object[] { new int[] { 5, 4, 3, 2, 1, 0, 1, 2, 3, 4, 5 }, TableGeneratorsInstances.VShaped };
+			yield return new object[] { new int[] { 0, 1, 2, 3, 4, 4, 3, 2, 1, 0 }, TableGeneratorsInstances.AShaped };
+			yield return new object[] { new int[] { 0, 1, 2, 3, 4, 5, 4, 3, 2, 1, 0 }, TableGeneratorsInstances.AShaped };
 		}
 
 		IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();

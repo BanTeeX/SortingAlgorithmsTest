@@ -13,7 +13,7 @@ namespace SortingAlgorithmsTest.Tests.Savers
 
 		public async Task SaveAsync(IEnumerable<SortTestResult> results)
 		{
-			string output = "";
+			var output = "Algorithm\tGenerator\tLength\tTicks\n";
 			foreach (var result in results)
 			{
 				output += result + "\n";

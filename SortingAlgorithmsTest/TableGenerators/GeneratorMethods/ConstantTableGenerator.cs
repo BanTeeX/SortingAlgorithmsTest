@@ -1,4 +1,4 @@
-﻿namespace SortingAlgorithmsTest.TableGenerator.GeneratorMethods
+﻿namespace SortingAlgorithmsTest.TableGenerators.GeneratorMethods
 {
 	internal class ConstantTableGenerator : ITableGenerator
 	{
@@ -6,9 +6,9 @@
 		{
 			var tab = new int[size];
 			var random = new Random();
-			int number = random.Next(tab.Length);
+			var number = random.Next(tab.Length);
 
-			for (int i = 0; i < tab.Length; i++)
+			for (var i = 0; i < tab.Length; i++)
 			{
 				tab[i] = number;
 			}

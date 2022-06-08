@@ -1,15 +1,15 @@
 ﻿namespace SortingAlgorithmsTest.TableGenerators.GeneratorMethods
 {
-	internal class RandomTableGenerator : ITableGenerator
+	internal class AShapedTableGenerator : ITableGenerator
 	{
 		public int[] Generate(int size)
 		{
 			var tab = new int[size];
-			var random = new Random();
 
-			for (var i = 0; i < tab.Length; i++)
+			for (var i = 0; i < (float)tab.Length / 2; i++)
 			{
-				tab[i] = random.Next(tab.Length);
+				tab[i] = i;
+				tab[tab.Length - 1 - i] = i;
 			}
 
 			return tab;
@@ -17,7 +17,7 @@
 
 		public override string ToString()
 		{
-			return "Random";
+			return "A-shaped";
 		}
 	}
 }

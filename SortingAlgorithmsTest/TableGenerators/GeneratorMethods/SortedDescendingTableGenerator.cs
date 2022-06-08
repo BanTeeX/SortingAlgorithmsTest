@@ -1,4 +1,4 @@
-﻿namespace SortingAlgorithmsTest.TableGenerator.GeneratorMethods
+﻿namespace SortingAlgorithmsTest.TableGenerators.GeneratorMethods
 {
 	internal class SortedDescendingTableGenerator : ITableGenerator
 	{
@@ -6,7 +6,7 @@
 		{
 			var tab = new int[size];
 
-			for (int i = 0; i < tab.Length; i++)
+			for (var i = 0; i < tab.Length; i++)
 			{
 				tab[i] = tab.Length - 1 - i;
 			}

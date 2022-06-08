@@ -12,7 +12,7 @@
 			{
 				swapped = false;
 
-				for (int i = leftPoint; i < rightPoint; i++)
+				for (var i = leftPoint; i < rightPoint; i++)
 				{
 					if (tab[i] > tab[i + 1])
 					{
@@ -29,7 +29,7 @@
 				swapped = false;
 				rightPoint--;
 
-				for (int i = rightPoint; i > leftPoint; i--)
+				for (var i = rightPoint; i > leftPoint; i--)
 				{
 					if (tab[i] < tab[i - 1])
 					{

@@ -1,5 +1,5 @@
 ﻿using SortingAlgorithmsTest.Sorts.Algorithms;
-using SortingAlgorithmsTest.TableGenerator.GeneratorMethods;
+using SortingAlgorithmsTest.TableGenerators.GeneratorMethods;
 
 namespace SortingAlgorithmsTest.Tests.DataStructures
 {

@@ -1,39 +1,41 @@
 ﻿using SortingAlgorithmsTest.Sorts.Algorithms;
-using SortingAlgorithmsTest.TableGenerator.GeneratorMethods;
+using SortingAlgorithmsTest.TableGenerators.GeneratorMethods;
 using SortingAlgorithmsTest.Tests.DataStructures;
 
 namespace SortingAlgorithmsTest.Tests.Builders
 {
 	internal class SortsTestWithGivenTableSizes : ISortsTestBuilder<List<SortTestCase>>
 	{
-		public IEnumerable<ISortingAlgorithm> Algorithms { get; set; }
-		public IEnumerable<ITableGenerator> TableGenerators { get; set; }
-		public IEnumerable<int> TableSizes { get; set; }
+		private readonly IEnumerable<ISortingAlgorithm> _algorithms;
+		private readonly IEnumerable<ITableGenerator> _tableGenerators;
+		private readonly IEnumerable<int> _tableSizes;
 
 		public SortsTestWithGivenTableSizes(
 			IEnumerable<ISortingAlgorithm> algorithms,
 			IEnumerable<ITableGenerator> tableGenerators,
 			IEnumerable<int> tableSizes)
 		{
-			Algorithms = algorithms;
-			TableGenerators = tableGenerators;
-			TableSizes = tableSizes;
+			_algorithms = algorithms;
+			_tableGenerators = tableGenerators;
+			_tableSizes = tableSizes;
 		}
 
 		public List<SortTestCase> Build()
 		{
 			var tests = new List<SortTestCase>();
-			foreach (var generator in TableGenerators)
+
+			foreach (var generator in _tableGenerators)
 			{
-				foreach (var size in TableSizes)
+				foreach (var size in _tableSizes)
 				{
 					var tab = generator.Generate(size);
-					foreach (var algorithm in Algorithms)
+					foreach (var algorithm in _algorithms)
 					{
 						tests.Add(new SortTestCase(algorithm, (int[])tab.Clone(), generator));
 					}
 				}
 			}
+
 			return tests;
 		}
 	}

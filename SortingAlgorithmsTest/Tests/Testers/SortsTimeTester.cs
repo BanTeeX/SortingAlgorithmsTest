@@ -4,14 +4,15 @@ using System.Diagnostics;
 
 namespace SortingAlgorithmsTest.Tests.Testers
 {
-	internal class SortsTimeTester : ISortsTester<SortTestCase, SortTestResult>
+	internal class SortsTimeTester : SortsTesterBase<SortTestCase, SortTestResult>
 	{
-		public SortTestResult RunTest(SortTestCase testCase)
+		public override SortTestResult RunTest(SortTestCase testCase)
 		{
 			var stopwatch = Stopwatch.StartNew();
-			testCase.testTable.SortTab(testCase.algorithm);
+			testCase.testTable.SortTab(testCase.algorithm.Sort);
 			stopwatch.Stop();
 			return new SortTestResult(testCase, stopwatch.ElapsedTicks);
+			
 		}
 	}
 }

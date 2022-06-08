@@ -1,4 +1,4 @@
-﻿namespace SortingAlgorithmsTest.TableGenerator.GeneratorMethods
+﻿namespace SortingAlgorithmsTest.TableGenerators.GeneratorMethods
 {
 	public interface ITableGenerator
 	{
