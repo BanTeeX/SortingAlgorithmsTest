@@ -1,8 +1,8 @@
 ﻿using SortingAlgorithmsTest.Sorts.Algorithms;
 using SortingAlgorithmsTest.TableGenerators.GeneratorMethods;
-using SortingAlgorithmsTest.Tests.DataStructures;
+using SortingAlgorithmsTest.TestTools.DataStructures;
 
-namespace SortingAlgorithmsTest.Tests.Builders
+namespace SortingAlgorithmsTest.TestTools.Builders
 {
 	internal class SortsTestWithGivenTableSizes : ISortsTestBuilder<List<SortTestCase>>
 	{

@@ -1,4 +1,4 @@
-﻿namespace SortingAlgorithmsTest.Tests.Testers
+﻿namespace SortingAlgorithmsTest.TestTools.Testers
 {
 	internal struct ProgressReport
 	{

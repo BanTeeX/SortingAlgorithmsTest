@@ -1,9 +1,6 @@
-﻿using SortingAlgorithmsTest;
+﻿using SortingAlgorithmsTest.TestsSeries;
 
-Part3.Start();
+MainRunner.Run();
 
-//var tasks = new List<Task>();
-//tasks.Add(Part1And2.Start());
-//tasks.Add(Part3.Start());
-
-//await Task.WhenAll(tasks);
+Console.WriteLine("\nClick any button to end");
+Console.Read();

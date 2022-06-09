@@ -15,7 +15,7 @@
 
 		private void InnerSort(int[] tab, int left, int right)
 		{
-			var pivot = _pivotDeterminant(tab, left, right);
+			var pivot = tab[(left + right) / 2];
 			var i = left;
 			var j = right;
 

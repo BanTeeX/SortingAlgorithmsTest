@@ -1,4 +1,4 @@
-﻿namespace SortingAlgorithmsTest.Tests.DataStructures
+﻿namespace SortingAlgorithmsTest.TestTools.DataStructures
 {
 	internal readonly struct SortTestResult
 	{

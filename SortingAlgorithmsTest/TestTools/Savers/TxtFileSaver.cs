@@ -1,6 +1,6 @@
-﻿using SortingAlgorithmsTest.Tests.DataStructures;
+﻿using SortingAlgorithmsTest.TestTools.DataStructures;
 
-namespace SortingAlgorithmsTest.Tests.Savers
+namespace SortingAlgorithmsTest.TestTools.Savers
 {
 	internal class TxtFileSaver : ISortTestResultSaver<IEnumerable<SortTestResult>>
 	{
@@ -11,14 +11,14 @@ namespace SortingAlgorithmsTest.Tests.Savers
 			_path = path;
 		}
 
-		public async Task SaveAsync(IEnumerable<SortTestResult> results)
+		public void Save(IEnumerable<SortTestResult> results)
 		{
 			var output = "Algorithm\tGenerator\tLength\tTicks\n";
 			foreach (var result in results)
 			{
 				output += result + "\n";
 			}
-			await File.WriteAllTextAsync(_path, output);
+			File.WriteAllText(_path, output);
 		}
 	}
 }

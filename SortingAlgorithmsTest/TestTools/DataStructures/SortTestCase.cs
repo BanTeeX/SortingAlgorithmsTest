@@ -1,7 +1,7 @@
 ﻿using SortingAlgorithmsTest.Sorts.Algorithms;
 using SortingAlgorithmsTest.TableGenerators.GeneratorMethods;
 
-namespace SortingAlgorithmsTest.Tests.DataStructures
+namespace SortingAlgorithmsTest.TestTools.DataStructures
 {
 	internal readonly struct SortTestCase
 	{

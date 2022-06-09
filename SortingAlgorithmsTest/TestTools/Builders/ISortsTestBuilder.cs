@@ -1,4 +1,4 @@
-﻿namespace SortingAlgorithmsTest.Tests.Builders
+﻿namespace SortingAlgorithmsTest.TestTools.Builders
 {
 	internal interface ISortsTestBuilder<TTestCase>
 	{

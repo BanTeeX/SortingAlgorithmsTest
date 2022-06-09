@@ -1,8 +1,8 @@
 ﻿using SortingAlgorithmsTest.Sorts;
-using SortingAlgorithmsTest.Tests.DataStructures;
+using SortingAlgorithmsTest.TestTools.DataStructures;
 using System.Diagnostics;
 
-namespace SortingAlgorithmsTest.Tests.Testers
+namespace SortingAlgorithmsTest.TestTools.Testers
 {
 	internal class SortsTimeTester : SortsTesterBase<SortTestCase, SortTestResult>
 	{
@@ -12,7 +12,7 @@ namespace SortingAlgorithmsTest.Tests.Testers
 			testCase.testTable.SortTab(testCase.algorithm.Sort);
 			stopwatch.Stop();
 			return new SortTestResult(testCase, stopwatch.ElapsedTicks);
-			
+
 		}
 	}
 }
