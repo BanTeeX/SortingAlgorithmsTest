@@ -54,7 +54,7 @@ namespace SortingAlgorithmsTest.TestsSeries
 			_tester = new SortsTimeTester();
 			var builder = new SortsTestWithGivenTableSizes(_algorithms, _generators, _tableSizes);
 			var builder2 = new SortsTestWithGivenTableSizes(_algorithms2, _generators2, _tableSizes);
-			_tests = builder2.Build();
+			_tests = builder.Build();
 			_tests.AddRange(builder2.Build());
 			_saver = new TxtFileSaver(_filePath);
 			_progress = new Progress<ProgressReport>();
@@ -62,6 +62,7 @@ namespace SortingAlgorithmsTest.TestsSeries
 
 			_logger.Log(this, "Part 3 tests status: Initialized");
 		}
+
 		public void Start()
 		{
 			_logger.Log(this, "Part 3 tests status: Starting");
